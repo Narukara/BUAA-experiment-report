@@ -1,0 +1,100 @@
+\documentclass[12pt, a4paper, UTF8, oneside]{ctexart}
+
+\include{font.tex}
+\setmainfont{Times New Roman}
+
+\usepackage{geometry}
+\geometry{left=3cm, right=2cm, top=3cm, bottom=2.5cm}
+
+\usepackage{graphicx}
+\graphicspath{{pics/}}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{} 
+\fancyhead[C]{\includegraphics[scale=0.5]{logo.png}}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.1mm} 
+\renewcommand{\footrulewidth}{0.1mm}
+
+\usepackage{datetime}
+\usepackage[cmyk]{xcolor}
+\usepackage{array}
+\usepackage{verbatim}
+\usepackage{placeins}
+
+\usepackage{listings}
+\lstset{
+    basicstyle          =   \linespread{1.2}\selectfont\ttfamily,
+    keywordstyle        =   \color{blue},
+    commentstyle        =   \color{gray},
+    stringstyle         =   \color{green!50!black},
+    columns             =   flexible,
+    numbers             =   left,
+    numberstyle         =   \footnotesize,
+    showspaces          =   false,
+    showstringspaces    =   false,
+    captionpos          =   t,
+    frame               =   lrtb,
+    breaklines          =   true,
+    basewidth           =   0.5em,
+    backgroundcolor     =   \color[RGB]{245,245,244},
+}
+
+\lstdefinestyle{Matlab}{
+    language = Matlab,
+}
+
+\begin{document}
+    \include{content/data.tex}
+    \include{title.tex}
+    \maketitle
+
+    \linespread{1.5} \selectfont
+
+    \begin{center}
+        \heiti \fontsize{\sanhao}{1em} 实验\extimes \qquad \exname
+        \vspace{0.3cm}
+    \end{center}
+
+    {
+    \heiti \fontsize{\sihao}{1em}
+    \begin{minipage}[b]{0.4\linewidth}
+        \begin{center}
+            实验时间\underline{\makebox[6em][c]{\extime}}
+        \end{center}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[b]{0.4\linewidth}
+        \begin{center}
+            同组同学\underline{\makebox[6em][c]{\classmate}}
+        \end{center}
+    \end{minipage}
+    }
+    \vspace{0.5cm}
+    
+    \begin{flushleft}
+        \heiti\fontsize{\sihao}{1em}一、实验目的
+    \end{flushleft}
+
+    \input{content/1.tex}
+    
+    \begin{flushleft}
+        \heiti\fontsize{\sihao}{1em}二、实验过程与结果
+    \end{flushleft}
+
+    \input{content/2.tex}
+
+    \begin{flushleft}
+        \heiti\fontsize{\sihao}{1em}三、结果分析与实验结论
+    \end{flushleft}
+    
+    \input{content/3.tex}
+    
+    \begin{flushleft}
+        \heiti\fontsize{\sihao}{1em}四、收获、体会及建议
+    \end{flushleft}
+
+    \input{content/4.tex}
+    
+\end{document}
