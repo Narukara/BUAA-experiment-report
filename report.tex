@@ -1,6 +1,5 @@
 \documentclass[12pt, a4paper, UTF8, oneside]{ctexart}
 
-\include{font.tex}
 \setmainfont{Times New Roman}
 
 \usepackage{geometry}
@@ -49,6 +48,7 @@
 }
 
 \begin{document}
+    \include{font.tex}
     \include{content/data.tex}
     \include{title.tex}
     \maketitle
@@ -56,12 +56,12 @@
     \linespread{1.5} \selectfont
 
     \begin{center}
-        \heiti \fontsize{\sanhao}{1em} 实验\extimes \qquad \exname
+        \heiti \fontsize{\sanhao}{1em} \selectfont 实验\extimes \qquad \exname
         \vspace{0.3cm}
     \end{center}
 
     {
-    \heiti \fontsize{\sihao}{1em}
+    \heiti \fontsize{\sihao}{1em} \selectfont
     \begin{minipage}[b]{0.4\linewidth}
         \begin{center}
             实验时间\underline{\makebox[6em][c]{\extime}}
@@ -77,25 +77,25 @@
     \vspace{0.5cm}
     
     \begin{flushleft}
-        \heiti\fontsize{\sihao}{1em}一、实验目的
+        \heiti\fontsize{\sihao}{1em} \selectfont 一、实验目的
     \end{flushleft}
 
     \input{content/1.tex}
     
     \begin{flushleft}
-        \heiti\fontsize{\sihao}{1em}二、实验过程与结果
+        \heiti\fontsize{\sihao}{1em} \selectfont 二、实验过程与结果
     \end{flushleft}
 
     \input{content/2.tex}
 
     \begin{flushleft}
-        \heiti\fontsize{\sihao}{1em}三、结果分析与实验结论
+        \heiti\fontsize{\sihao}{1em} \selectfont 三、结果分析与实验结论
     \end{flushleft}
     
     \input{content/3.tex}
     
     \begin{flushleft}
-        \heiti\fontsize{\sihao}{1em}四、收获、体会及建议
+        \heiti\fontsize{\sihao}{1em} \selectfont 四、收获、体会及建议
     \end{flushleft}
 
     \input{content/4.tex}
